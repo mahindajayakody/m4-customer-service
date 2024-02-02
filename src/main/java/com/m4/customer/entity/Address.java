@@ -1,4 +1,4 @@
-package com.m4.entity;
+package com.m4.customer.entity;
 
 public class Address {
     private String address1;

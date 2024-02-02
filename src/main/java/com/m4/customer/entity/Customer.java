@@ -1,4 +1,4 @@
-package com.m4.entity;
+package com.m4.customer.entity;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,12 +8,12 @@ import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
-@Document(collation = "customer")
+@Document(collection = "customer")
 public class Customer {
 
     @Id
     @JsonProperty("id")
-    private Long id;
+    private String id;
     @JsonProperty("firstName")
     private String firstName;
     @JsonProperty("middleName")
@@ -33,7 +33,7 @@ public class Customer {
         this.setLsatName(lsatName);
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 

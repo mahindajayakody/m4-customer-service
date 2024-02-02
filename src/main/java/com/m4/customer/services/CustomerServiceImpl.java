@@ -1,12 +1,12 @@
-package com.m4.services;
+package com.m4.customer.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.m4.entity.Customer;
-import com.m4.repository.CustomerRepository;
+import com.m4.customer.entity.Customer;
+import com.m4.customer.repository.CustomerRepository;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -25,9 +25,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer updateCustomer(Customer customer) throws Exception {
+    public Customer updateCustomer(String customeId,Customer customer) throws Exception {
 
-        Customer existingCustomer = customerRepository.findById(customer.getId()).get();
+        Customer existingCustomer = customerRepository.findById(customeId).get();
         if (existingCustomer != null) {
             existingCustomer.setFirstName(customer.getFirstName());
             existingCustomer.setLsatName(customer.getLsatName());
@@ -40,12 +40,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void deleteCustomer(Long customerId) throws Exception {
+    public void deleteCustomer(String customerId) throws Exception {
         customerRepository.deleteById(customerId);
     }
 
     @Override
-    public Customer getCustomer(Long customerId) throws Exception {
+    public Customer getCustomer(String customerId) throws Exception {
         return customerRepository.findById(customerId).get();
     }
 
