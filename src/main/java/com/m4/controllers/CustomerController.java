@@ -1,4 +1,4 @@
-package com.m4.application;
+package com.m4.controllers;
 
 import java.util.List;
 
@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.entity.Customer;
-import com.services.CustomerService;
+import com.m4.entity.Customer;
+import com.m4.services.CustomerService;
 
 @RestController
+@RequestMapping("api")
 public class CustomerController {
 	@Autowired
 	CustomerService customerService;

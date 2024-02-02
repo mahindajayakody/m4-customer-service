@@ -1,4 +1,4 @@
-package com.m4.application;
+package com.m4.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
