@@ -25,12 +25,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer updateCustomer(String customeId,Customer customer) throws Exception {
+    public Customer updateCustomer(String customerId,Customer customer) throws Exception {
 
-        Customer existingCustomer = customerRepository.findById(customeId).get();
+        Customer existingCustomer = customerRepository.findById(customerId).get();
         if (existingCustomer != null) {
             existingCustomer.setFirstName(customer.getFirstName());
-            existingCustomer.setLsatName(customer.getLsatName());
+            existingCustomer.setLastName(customer.getLastName());
             existingCustomer.setMiddleName(customer.getMiddleName());
             existingCustomer.setBillingAddress(customer.getBillingAddress());
             existingCustomer.setMailingAddress(customer.getMailingAddress());

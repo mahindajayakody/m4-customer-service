@@ -19,7 +19,7 @@ public class Customer {
     @JsonProperty("middleName")
     private String middleName;
     @JsonProperty("lsatName")
-    private String lsatName;
+    private String lastName;
     @JsonProperty("mailingAddress")
     private Address mailingAddress;
     @JsonProperty("billingAddress")
@@ -28,21 +28,13 @@ public class Customer {
     protected Customer() {
     }
 
-    public Customer(String firstName, String lsatName) {
+    public Customer(String firstName, String lastName) {
         this.setFirstName(firstName);
-        this.setLsatName(lsatName);
+        this.setLastName(lastName);
     }
 
     public String getId() {
         return id;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
     }
 
     public String getFirstName() {
@@ -53,20 +45,20 @@ public class Customer {
         this.firstName = firstName;
     }
 
-    public String getMidleName() {
+    public String getMiddleName() {
         return middleName;
     }
 
-    public void setMidleName(String middleName) {
+    public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
-    public String getLsatName() {
-        return lsatName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLsatName(String lsatName) {
-        this.lsatName = lsatName;
+    public void setLastName(String lsatName) {
+        this.lastName = lsatName;
     }
 
     public Address getMailingAddress() {
@@ -87,7 +79,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return String.format("Customer [id=%d ,firstName = %s,lastName=%s]", this.id, this.firstName, this.lsatName);
+        return String.format("Customer [id=%d ,firstName = %s,lastName=%s]", this.id, this.firstName, this.lastName);
     }
 
 }

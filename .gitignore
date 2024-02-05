@@ -19,14 +19,12 @@
 *.tar.gz
 *.rar
 *.DS*
-/build
-/.gradle
 /.settings
-/.metadata
-/.vscode
 /bin
-/.classpath
+/build
 /.project
+/.gradle
+/.metadata
 
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml

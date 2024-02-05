@@ -14,7 +14,7 @@
             "type": "java",
             "name": "Application",
             "request": "launch",
-            "mainClass": "com.m4.application.Application",
+            "mainClass": "com.m4.customer.Application",
             "projectName": "m4-customer-service"
         }
     ]
